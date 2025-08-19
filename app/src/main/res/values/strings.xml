@@ -1,3 +1,6 @@
 <resources>
-    <string name="app_name">BruttoNettoRechner</string>
+    <string name="app_name" translatable="false">BruttoNettoRechner</string>
+    <string name="description_text" translatable="false">Bitte geben Sie den Wert unten ein und wählen Sie den Prozentsatz für die entsprechende Rechnung aus.</string>
+    <string name="brutto_text" translatable="false">Brutto</string>
+    <string name="netto_text" translatable="false">Netto</string>
 </resources>
