@@ -1,0 +1,12 @@
+<resources>
+    <string-array name="prozent_display">
+        <item>19 Prozent</item>
+        <item>16 Prozent</item>
+        <item>7 Prozent</item>
+    </string-array>
+    <integer-array name="prozent_internal">
+        <item>19</item>
+        <item>16</item>
+        <item>7</item>
+    </integer-array>
+</resources>
