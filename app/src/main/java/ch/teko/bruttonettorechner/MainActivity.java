@@ -1,5 +1,6 @@
 package ch.teko.bruttonettorechner;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.text.Editable;
 import android.view.View;
@@ -41,21 +42,22 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
                 double input = Double.parseDouble(textOfInputField.toString());
                 String selectedValueOfRadioButton = selectedRadioButton.getText().toString();
                 int selectedPercentage = getSelectedPercentage();
-                //System.out.println("value" + value);
+                Intent intent = new Intent(this, ResultActivity.class);
+                intent.putExtra("percentage", "Prozent: " + selectedPercentage);
                 switch (selectedValueOfRadioButton) {
                     case "Brutto": {
                         double netto = (input / 100) * (100 - selectedPercentage);
-                        System.out.println("netto: " + netto);
+                        intent.putExtra("input", "Brutto: " + input);
+                        intent.putExtra("output", "Netto: " + netto);
                         break;
                     }
                     case "Netto": {
                         double brutto = (input / (100 - selectedPercentage)) * 100;
-                        System.out.println("brutto: " + brutto);
+                        intent.putExtra("input", "Netto: " + input);
+                        intent.putExtra("output", "Brutto: " + brutto);
                     }
-
                 }
-                System.out.println("selected percentage: " + selectedPercentage);
-                System.out.println("selected radio button: " + selectedValueOfRadioButton);
+                startActivity(intent);
             }
 
         });
