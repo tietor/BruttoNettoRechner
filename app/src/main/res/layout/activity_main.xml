@@ -36,21 +36,21 @@
             android:inputType="numberDecimal" />
 
         <RadioGroup
+            android:id="@+id/radio_group"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            >
-
-            <RadioButton
-                android:id="@+id/radio_netto"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/netto_text" />
+            android:layout_height="wrap_content">
 
             <RadioButton
                 android:id="@+id/radio_brutto"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/brutto_text" />
+
+            <RadioButton
+                android:id="@+id/radio_netto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/netto_text" />
 
         </RadioGroup>
 
